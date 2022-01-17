@@ -5,7 +5,7 @@ public:
 
     /* constructor with parameters */
     Vertex<T>(T nodename) {
-        this->node_id = nodename;
+        this->nodename = nodename;
     }
     /* default constructor for vertex construction */
     Vertex<T>() {
