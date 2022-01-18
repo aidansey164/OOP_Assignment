@@ -21,7 +21,10 @@ int main() {
     int n = 3;
     Graph<int> g(edgeList, n);
 
-    returnEdges(g, n);
+    if(!isgraphDAG(g, n)){
+        cout << "It's not an acyclic graph" << endl;
+        return 0;
+    }
 
 
     return 0;
