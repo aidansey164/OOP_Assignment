@@ -7,6 +7,7 @@ public class main_launcher {
 		CryptoTypes doge = new CryptoTypes("doge", 10000, 1000);
 		System.out.println(btc.symbol);
 		System.out.println(doge.symbol);
+		System.out.println(doge.stock);
 
 	}
 
