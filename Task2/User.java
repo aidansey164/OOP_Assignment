@@ -1,7 +1,8 @@
 
 public class User {
     public  int userid;
-    public int age;public String name;
+    public int age;
+    public String name;
     public double FIAT_balance;
     public double Crypto_balance = 0;
     public boolean admin_status = false;
