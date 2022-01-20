@@ -1,3 +1,5 @@
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Order {
 	
     public enum OrderType { 
@@ -8,13 +10,15 @@ public class Order {
         MARKET, LIMIT
     }
 
+    
+    private static final AtomicInteger count = new AtomicInteger(0);
     public final OrderType orderType;
     public final OrderTypeS orderSubType;
     public double price;
     public double quantity;
     public final User user;
     public final CryptoTypes crypto;
-    public boolean isFilled = false;
+    public int order_id;
 
 
 
@@ -25,6 +29,7 @@ public class Order {
         this.orderType = orderType;
         this.orderSubType = orderSubType;
         this.price = price;
+        this.order_id = count.incrementAndGet();
     }
 
     public Order(User user, CryptoTypes crypto, double quantity, OrderType orderType, OrderTypeS orderSubType) {
@@ -33,5 +38,6 @@ public class Order {
         this.quantity = quantity;
         this.orderType = orderType;
         this.orderSubType = orderSubType;
+        this.order_id = count.incrementAndGet();
     }
 }
