@@ -15,6 +15,7 @@ public class SystemCrypto {
     }
 
     public int count = 0;
+    public int count2 = 0;
     public void addOrder(Order order) { 
         if (order.quantity <= 0) {
             System.out.println("Invalid order quantity.");
@@ -23,5 +24,15 @@ public class SystemCrypto {
         orderbook.orders.add(order);
         orderbook.order_queue.add(order);
         count++;
+    }
+    
+    
+    public void removeOrder(Order order) { 
+        if (order.quantity <= 0) {
+            System.out.println("Invalid order quantity.");
+        }
+        orderbook.orders.remove(order);
+        orderbook.order_queue.remove(order);
+        count2++;
     }
 }
