@@ -1,7 +1,7 @@
 #include "myuint.hpp"
 
 
-// converting a decimal number to a string
+// converting a decimal number to a binary
 std::string decimalToBinary(int dec)
 {
     std::string bin = "";
@@ -219,14 +219,14 @@ myuint<T> myuint<T>::operator*(myuint<T> num)
     return answer;
 }
 
-// Overloading greater than > operator
+// Overloading greater than >= operator
 template <int T>
 bool myuint<T>::operator>=(myuint<T> num)
 {
     return (*this > num || *this == num);
 }
 
-// Overloading the '>=' operator
+// Overloading the '>' operator
 template <int T>
 bool myuint<T>::operator>(myuint<T> num)
 {
