@@ -25,7 +25,7 @@ public class main_launcher {
         
         for (Order orders : syst.orderbook.order_queue) {
             System.out.println(
-            		"User: " + orders.user + "\nOrder Type: " + orders.orderType + "\nOrder Sub-type: " + orders.orderSubType + "\nCryptoType" + orders.crypto);
+            		"User: " + orders.user + "\nOrder Type: " + orders.orderType + "\nOrder Sub-type: " + orders.orderSubType + "\nCryptoType: " + orders.crypto);
         }
   
     }
